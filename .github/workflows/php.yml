@@ -1,0 +1,14 @@
+name: PHP 
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print Hello Message
+      run: echo "Hello world from github actions"
