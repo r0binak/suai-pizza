@@ -26,7 +26,7 @@
 ![photo_2021-12-15 23 41 07](https://user-images.githubusercontent.com/80983900/146261834-b21c4728-eb95-45a4-8646-7dc1fb677040.jpeg)
 ### Схема взаимодействия компонентов
 
-### Swagger API
+### [Swagger API](https://app.swaggerhub.com/apis/suai-pizza/suai-pizza/1.0.0)
 
 ## Как локально поднять это?
 1. Установить W/L/M AMP
