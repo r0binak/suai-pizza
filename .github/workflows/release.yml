@@ -22,7 +22,7 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            - First Change
-            - Second Change
+            - Present CourseWork
+            - Automatic deploy
           draft: false
           prerelease: false
