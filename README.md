@@ -47,6 +47,9 @@
 
 ### [Swagger API](https://app.swaggerhub.com/apis/suai-pizza/suai-pizza/1.0.0)
 
+### CI/CD
+CI/CD подход реализован через Github Actions. При каждом пуше в main ветку, на Github автоматически создается релиз.
+
 ### Тестовые данные для входа
 
 - Клиент ```parshin:123QWEasd```
