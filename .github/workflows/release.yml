@@ -1,8 +1,8 @@
 on:
   push:
-    tags:
-      - 'v*' 
-
+    branches:
+      - main
+ 
 name: Create Release
 
 jobs:
