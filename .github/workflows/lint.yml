@@ -1,0 +1,16 @@
+name: "php-lint"
+
+on:
+  push:
+    brahches:
+      - main
+      - develop
+jobs:
+  tagged-release:
+    name: "Check syntax"
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "overtrue/phplint@7.4"
+        with:
+          path: .
+          options: --exclude=*.log
