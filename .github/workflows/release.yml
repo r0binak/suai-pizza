@@ -1,16 +1,21 @@
-name: Releases
+name: "tagged-release"
 
-on: 
+on:
   push:
     tags:
-    - '*'
+      - "v*"
 
 jobs:
+  tagged-release:
+    name: "Tagged Release"
+    runs-on: "ubuntu-latest"
 
-  build:
-    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: ncipollo/release-action@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: "Build & test"
+        run: |
+          echo "done!"
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
