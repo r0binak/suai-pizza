@@ -48,7 +48,7 @@
 ### [Swagger API](https://app.swaggerhub.com/apis/suai-pizza/suai-pizza/1.0.0)
 
 ### CI/CD
-CI/CD подход реализован через Github Actions. При каждом пуше в main ветку, на Github автоматически создается релиз.
+CI/CD подход реализован через Github Actions. При каждом пуше tag начинающегося с v*, на Github автоматически создается Release с указанием тэга.
 
 
 ## Как локально поднять это?
