@@ -1,75 +1,75 @@
 # SUAI pizza
-## Цель работы
-Разработать информационную систему ```SUAI pizza``` - сервис доставки пиццы.
-## Описание системы
-### Пользовательские роли
-В системе предусмотрены две пользовательские роли:
-- Администратор - контролирует текущие заказы и изменяет их статус, имеет возможность добавлять новые категории и блюда, отвечает Клиентам на возникшие у них вопросы
-- Клиент - может оформить заказ, узнать его статус, или задать интересующий вопрос у Администратора
-### Пользовательские интерфейсы
-### Пользовательские сценарии
-#### Клиент
-При переходе на сайт, Клиенту необходимо зарегистрироваться. Для этого необходимо нажать кнопку ```SingUp``` в верхнем правом углу, а после ввести все необходимые данные. После успешной регистрации Клиент может авторизоваться и полностью воспользоваться функционалом сайта - для этого нужно нажать кнопку ```Login``` в верхнем правом углу.
+## Objective
+Develop information system ```SUAI pizza``` - pizza delivery service.
+## Description of the system
+### Custom Roles
+The system provides two user roles:
+- Administrator - controls current orders and changes their status, has the ability to add new categories and dishes, answers Clients to their questions
+- Client - can place an order, find out its status, or ask the Administrator a question of interest
+### User interfaces
+### Custom scripts
+#### Customer
+When going to the site, the Client needs to register. To do this, click the ```SingUp``` button in the upper right corner, and then enter all the necessary data. After successful registration, the Client can log in and fully use the functionality of the site - for this you need to click the ```Login``` button in the upper right corner.
 
-Чтобы сделать заказ, нужно перейти в категории, выбрать понравившуюся пиццу и добавить ее в корзину. После этого в корзине окончательно оформить заказ, указав все нужные данные для доставки. Список всех совершенных заказов хранится в разделе ```Your Orders```.
+To place an order, you need to go to the categories, select the pizza you like and add it to the cart. After that, finalize the order in the basket, indicating all the necessary data for delivery. A list of all completed orders is stored in the ```Your Orders``` section.
 
-Также клиент имеет возможность обратиться к администрации пиццерии через форму ```Contact Us```, с указанием конкретного номера заказа - ```orderId```.
+Also, the client has the opportunity to contact the administration of the pizzeria through the ```Contact Us``` form, indicating the specific order number - ```orderId```.
 
-Дополнительно реализован поиск по товарам. При запросе в строке ```Search``` Клиент может получить как категорию пиццы, так и конкретную пиццу.
+In addition, a search by goods has been implemented. When querying in the ```Search``` string, the Client can get both the pizza category and the specific pizza.
 
-#### Администратор
-Панель администратора находится по отдельной ссылке и не видна обычным клиентам (```/admin```). У Администратора нет регистрации, предусмотрена только авторизация - если сильно нужно зарегистрировать нового Админа, то это можно сделать через внесение новых данных в БД, с выставлением поля ```userType=1```, где 1 - Админ, 0 - Клиент.
+#### Administrator
+The admin panel is located under a separate link and is not visible to regular clients (```/admin```). The Administrator does not have registration, only authorization is provided - if you really need to register a new Admin, then this can be done by entering new data into the database, setting the field ```userType=1```, where 1 - Admin, 0 - Client.
 
-В разделе ```Order Details``` Администратор может просматривать содержимое всех заказов, а также менять их статусы. При установке определенного статуса, открывается возможность назначить курьера, указывая его данные.
+In the ```Order Details``` section, the Administrator can view the contents of all orders, as well as change their statuses. When a certain status is set, it is possible to assign a courier, indicating his data.
 
-В разделе ```Category``` Администратор может добавлять/изменять/удалять категории пицц - указывая название, описание а также изображение.
+In the ```Category``` section, the Administrator can add/modify/delete categories of pizzas - specifying the name, description and also the image.
 
-В разделе ```Item``` Администратор может добавлять/изменять/удалять конкретные пиццы - указывая название, описание а также изображение.
+In the ```Item``` section, the administrator can add/modify/delete specific pizzas - specifying the name, description and also the image.
 
-Администратор видит всех зарегистрированных пользователей в системе. Он может менять информацию о них - имя, фото, контактные данные, а также изменять их привилегии - повышать с Клиента до Администратора. Также он может создать нового пользователя, минуя окно ```Sign Up```.
+The administrator sees all registered users in the system. He can change information about them - name, photo, contact details, as well as change their privileges - upgrade from Client to Administrator. It can also create a new user, bypassing the ```Sign Up``` window.
 
-Также есть раздел где можно давать обратную связь Клиентам, в нём отображаются все сообщения от Клиентов, а также при нажатии на кнопку ```History``` можно увидеть все ответы, которые Администратор послал Клиентам.
+There is also a section where you can give feedback to Clients, it displays all messages from Clients, and when you click on the ```History``` button, you can see all the answers that the Administrator sent to Clients.
 
 
-### Компоненты системы
-Используемый стек технологий:
+### System components
+Used technology stack:
 - Apache
 - PHP 7.2.24
 - JavaScript
 - MySQL 14.4
-- JQuery 3.4.1
+- jquery 3.4.1
 - Popper 1.16.0
 - Bootstrap 4.4.1
 
-Для удобства, наглядности, а также лучшей читаемости, весь код разбит на несколько файлов. Файлы можно разбить по группам:
-- элементы пользовательского интерфейса
-- админ-панель
-- регистрация и авторизация
+For convenience, clarity, and better readability, the entire code is divided into several files. Files can be divided into groups:
+- user interface elements
+- Admin panel
+- registration and authorization
 
-### Схема базы данных
-![photo_2021-12-15 23 41 07](https://user-images.githubusercontent.com/80983900/146261834-b21c4728-eb95-45a4-8646-7dc1fb677040.jpeg)
+### Database schema
+![photo_2021-12-15 23 41 07]
 
-## Другие фичи
+## Other features
 
 ### [Swagger API](https://app.swaggerhub.com/apis/suai-pizza/suai-pizza/1.0.0)
 
-### CI/CD
-CI/CD подход реализован через Github Actions. При каждом пуше tag начинающегося с v*, на Github автоматически создается Release с указанием тэга.
+###CI/CD
+The CI/CD approach is implemented through Github Actions. Each time you push a tag starting with v*, a Release is automatically created on Github with the tag specified.
 
-### SSL-сертификат
-SSL-сертификат позволяет устанавливать безопасное HTTPS соединение между пользователем и сайтом. Выдан при помощи Let's Encrypt Cert-bot.
+### SSL certificate
+An SSL certificate allows you to establish a secure HTTPS connection between a user and a website. Issued using Let's Encrypt Cert-bot.
 
-### Кастомный домен
-Добавлен кастомный домен ```r0binak.design``` через внесение A-записей на DNS серверах.
+### Custom domain
+Added custom domain ```r0binak.design``` via adding A-records on DNS servers.
 
-### Яндекс Метрика
-Добавлен инструмент веб-аналитики, который помогает получать наглядные отчеты, видеозаписи действий посетителей, отслеживать источники трафика и оценивать эффективность онлайн и офлайн-рекламы.
+### Yandex Metrica
+A web analytics tool has been added that helps you get visual reports, videos of visitor actions, track traffic sources and evaluate the effectiveness of online and offline advertising.
 
 <img width="861" alt="Снимок экрана 2021-12-25 в 11 45 10" src="https://user-images.githubusercontent.com/80983900/147381263-a6c8cf18-71f4-4858-80a0-29fcaa765817.png">
 
 
-## Как локально поднять это?
-1. Установить W/L/M AMP
-2. Склонировать репозиторий
-3. Переместить локальный репозиторий в папку, где хостятся локальные проекты
-4. Открыть браузер и перейти по нужному адресу 
+## How to raise it locally?
+1. Install W/L/M AMP
+2. Clone the repository
+3. Move the local repository to the folder where local projects are hosted
+4. Open a browser and go to the desired address
