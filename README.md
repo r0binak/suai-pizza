@@ -46,8 +46,6 @@ For convenience, clarity, and better readability, the entire code is divided int
 - Admin panel
 - registration and authorization
 
-### Database schema
-![photo_2021-12-15 23 41 07]
 
 ## Other features
 
